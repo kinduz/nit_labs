@@ -1,0 +1,407 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+html {
+  height: 100%
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+input:not([type="checkbox"]),
+button,
+a, select {
+  all: unset;
+}
+
+html {
+  font-family: 'Ubuntu';
+}
+
+.d-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  gap: 32px;
+}
+
+.filters__all {
+  position: relative;
+}
+
+.filters__body {
+  position: absolute;
+  left: 0;
+  top: 46px;
+  width: 120%;
+  font-size: 18px;
+  padding: 4px 0 4px 8px;
+  border-radius: 15px;
+  gap: 6px;
+  background: #FFF;
+  box-shadow: 0px 0px 13px 10px rgba(34, 60, 80, 0.13);
+  z-index: 1;
+  button {
+    margin-top: 8px;
+    height: 12px;
+  }
+}
+
+.filter__item {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3b3636;
+  transition: .3s all;
+  &:hover {
+    color: #000000;
+  }
+}
+
+.checkbox__filter {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right: 32px;
+  font-size: 24px;
+}
+
+.filter__date {
+  gap: 8px;
+  input {
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #a09c9c;
+    width: 110px;
+  }
+}
+
+.filter__select {
+  width: 65%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 4px 0;
+  border: 1px solid #a09c9c;
+  text-align: center;
+}
+
+.filters__buttons {
+  gap: 4px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.content {
+  margin-top: 32px;
+  gap: 64px;
+}
+
+.all__games {
+  flex-wrap: wrap;
+  max-width: 1800px;
+  gap: 48px;
+}
+
+.game__body {
+  position: relative;
+  border-radius: 10px;
+  gap: 8px;
+  box-shadow: 10px 8px 44px -18px rgba(34, 60, 80, 0.8);
+  padding-bottom: 12px;
+  width: 330px;
+  height: 500px;
+  .img {
+    height: 100%;
+    width: 100%;
+  }
+  .game__info {
+    gap: 6px;
+  }
+  .game__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+.game__rating, .game__delete {
+  position: absolute;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.game__rating {
+  left: 4px;
+  padding: 10px 4px;
+  top: 4px;
+
+  font-weight: 500;
+  border: 2px solid black;
+  background-color: #f1ebeb;
+}
+
+.game__delete {
+  top: -4px;
+  right: -4px;
+  font-weight: 500;
+  padding: 8px 10px;
+}
+
+.genre {
+  color: rgb(186, 61, 8);
+  font-size: 16px;
+}
+
+.year {
+  font-weight: 500;
+}
+
+.multiplayer {
+  color: green;
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  background: rgba(50, 50, 50, 0.58);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.modal__content {
+  padding: 32px 64px;
+  position: relative;
+  border-radius: 10px;
+  background: rgba(244, 238, 238, 1);
+  text-align: center;
+  row-gap: 32px;
+  animation: content-fade .5s forwards;
+  max-height: 900px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modal__inputs {
+  gap: 8px;
+  button {
+    margin-top: 8px;
+  }
+}
+
+.multiplayer__input {
+  gap: 4px;
+  border: 1px solid #CDCDCD;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 25px;
+  padding: 12px;
+  input[type="checkbox"] {
+    margin-top: 6px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.input__file {
+  border: 1px solid #CDCDCD;
+  border-radius: 25px;
+  transition: .3s all;
+  &:hover {
+    border-color: #a39f9f;
+  }
+  input {
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    font-size: 0 !important;
+    opacity: 0;
+  }
+}
+
+.file__name {
+  margin-top: 6px;
+  color: green;
+}
+
+.input__text {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 76%;
+  height: 10%;
+  font-size: 20px;
+}
+
+.select__rating {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 25px;
+  border: 1px solid #CDCDCD;
+  transition: .3s all;
+  &:hover {
+    border-color: #a39f9f;
+  }
+}
+
+.empty__list {
+  font-size: 32px;
+  color: rgb(255, 68, 0);
+}
